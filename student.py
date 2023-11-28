@@ -1,13 +1,13 @@
 def main():
     student = get_student()
-    if student[0] == "Padma":
-        student[1] = "Ravenclaw"
-    print(f"{student[0]} from {student[2]}")
+    if student["name"] == "Padma":
+        student["house"] = "Ravenclaw"
+    print(f"{student['name']} from {student['house']}")
 
 def get_student():
     name = input("Name: ")
     house = input("House: ")
-    return [name, house] # <--- change tuple to list to convert between immutable to mutable
+    return {"name": name, "house": house} # <--- values in dicts are mutable
 
 if __name__ == "__main__":
     main()
