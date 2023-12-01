@@ -1,4 +1,9 @@
-MEOWS = 3 # defined in caps but overriding isn't prevent. Python honor system
+class Cat:
+    MEOWS = 3
 
-for _ in range(MEOWS):
-    print("meow")
+    def meow(self):
+        for _ in range(Cat.MEOWS):
+            print("meow")
+
+cat = Cat()
+cat.meow()
