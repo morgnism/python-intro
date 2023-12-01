@@ -1,12 +1,12 @@
 import random
 
-# use classes when you want to represent real-world entities
+# classes act as bundlers of data and methods
 class Hat:
-    def __init__(self):
-        self.houses = ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"]
+    houses = ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"]
     
-    def sort(self, name):
-        print(name, "is in", random.choice(self.houses))
+    # this is similar to writing prototype methods in JavaScript
+    @classmethod
+    def sort(cls, name):
+        print(name, "is in", random.choice(cls.houses))
 
-hat = Hat()
-hat.sort("Harry")
+Hat.sort("Harry")
