@@ -7,6 +7,13 @@ class Vault:
     def __str__(self):
         return f"{self.galleons} Galleons, {self.sickles} Sickles, {self.knuts} Knuts"
 
+    # teaching Python to overload the `+` operator
+    def __add__(self, other):
+        galleons = self.galleons + other.galleons
+        sickles = self.sickles + other.sickles
+        knuts = self.knuts + other.knuts
+        return Vault(galleons, sickles, knuts)
+
 potter = Vault(100, 50, 20)
 print(potter)
 
@@ -17,5 +24,5 @@ galleons = potter.galleons + weasley.galleons
 sickles = potter.sickles + weasley.sickles
 knuts = potter.knuts + weasley.knuts
 
-total = Vault(galleons, sickles, knuts)
+total = potter + weasley
 print(total)
