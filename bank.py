@@ -1,4 +1,4 @@
-balance = 0 # can read but can't write to global variables
+balance = 0
 
 def main():
     print("Balance:", balance)
@@ -7,9 +7,11 @@ def main():
     print("Balance:", balance)
 
 def deposit(n):
+    global balance # enable writing to global variable
     balance +=n
 
 def withdraw(n):
+    global balance
     balance -=n
 
 if __name__ == "__main__":
