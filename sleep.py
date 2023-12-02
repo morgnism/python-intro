@@ -4,10 +4,10 @@ def main():
         print(s)
 
 def sheep(n):
-    flock = []
     for i in range(n):
-        flock.append("🐑" * i)
-    return flock
+        # generators maintain state allowing
+        # yield to return iterator for every calculated result on the following line
+        yield "🐑" * i
 
 if __name__ == "__main__":
     main()
