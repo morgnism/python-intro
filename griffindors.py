@@ -1,16 +1,8 @@
-students = [
-    {"name": "Hermoine", "house": "Gryffindor"},
-    {"name": "Harry", "house": "Gryffindor"},
-    {"name": "Ron", "house": "Gryffindor"},
-    {"name": "Draco", "house": "Slytherin"},
-]
+students = ["Hermoine", "Harry", "Ron"]
 
+gryffindors = []
 
-def is_gryffindor(s):
-    return s["house"] == "Gryffindor"
+for student in students:
+    gryffindors.append({"name": student, "house": "Gryffindor"})
 
-
-gryffindors = filter(is_gryffindor, students)
-
-for gryffindor in sorted(gryffindors, key=lambda s: s["name"]):
-    print(gryffindor["name"])
+print(gryffindors)
