@@ -1,7 +1,7 @@
 def main():
-    yell(["This", "is", "SPARTA"])
+    yell("This", "is", "SPARTA")
 
-def yell(words):
+def yell(*words):
     uppercased = []
     for word in words:
         uppercased.append(word.upper())
